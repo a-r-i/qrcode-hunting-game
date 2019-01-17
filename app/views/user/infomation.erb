@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="content">
+    <form action="/" method="get">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <div class="field">
+        <label class="label">現在の埋蔵量</label>
+        <p><%= @qrcode_coin_sum %></p>
+        <label class="label">あなたの残高</label>
+        <p><%= @balance %></p>
+      </div>
+
+      <div class="field is-grouped">
+        <div class="control">
+          <a class="button is-danger" href="/logout">ログアウト</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
